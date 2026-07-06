@@ -1,0 +1,63 @@
+import { Link } from "@tanstack/react-router";
+import { Mail, Globe } from "lucide-react";
+
+export function SiteFooter() {
+  return (
+    <footer className="border-t border-white/5 bg-background">
+      <div className="mx-auto max-w-7xl px-6 py-14">
+        <div className="grid gap-10 md:grid-cols-3">
+          <div>
+            <div className="text-base font-semibold text-foreground">Tarun Shendge</div>
+            <p className="mt-3 max-w-xs text-sm text-muted-foreground">
+              Global Trade &amp; Sanctions Risk Specialist specializing in technical compliance
+              automation.
+            </p>
+          </div>
+          <div>
+            <div className="text-sm font-semibold text-foreground">Sitemap</div>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+              <li><Link to="/" className="hover:text-primary">Home</Link></li>
+              <li><Link to="/experience" className="hover:text-primary">Experience</Link></li>
+              <li><Link to="/process" className="hover:text-primary">Process Improvements</Link></li>
+              <li><Link to="/education" className="hover:text-primary">Education</Link></li>
+              <li>
+                <a href="https://www.linkedin.com/in/tarun-shendge-81a546198/" className="hover:text-primary">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div className="text-sm font-semibold text-foreground">Contact</div>
+            <p className="mt-3 max-w-xs text-sm text-muted-foreground">
+              Let's connect and build smarter compliance solutions
+            </p>
+            <div className="mt-4 flex gap-3">
+              <a
+                href="mailto:sdgtarun15@gmail.com"
+                aria-label="Email"
+                className="grid h-10 w-10 place-items-center rounded-md bg-surface text-primary ring-1 ring-white/10 hover:bg-surface-2"
+              >
+                <Mail className="h-4 w-4" />
+              </a>
+         <a
+  href="https://www.linkedin.com/in/tarun-shendge-81a546198/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="LinkedIn"
+  className="grid h-10 w-10 place-items-center rounded-md bg-surface text-primary ring-1 ring-white/10 hover:bg-primary/10 hover:ring-primary/40"
+>
+  <img
+  src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+  alt="LinkedIn"
+  className="h-4 w-4 invert"
+/>
+</a>
+            </div>
+          </div>
+        </div>
+        <div className="mt-12 border-t border-white/5 pt-6 text-center text-xs uppercase tracking-wider text-muted-foreground">
+          © Tarun Shendge. Global Trade &amp; Sanctions Risk Specialist. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  );
+}
