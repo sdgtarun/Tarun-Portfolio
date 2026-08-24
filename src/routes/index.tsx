@@ -99,12 +99,6 @@ function TiltPortrait() {
           height={1024}
           className="block h-full w-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
         />
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-surface/90 px-4 py-2 text-xs font-medium text-primary ring-1 ring-primary/40 backdrop-blur">
-          <span className="inline-flex items-center gap-2">
-            <BadgeCheck className="h-4 w-4" />
-            Verified Specialist
-          </span>
-        </div>
       </motion.div>
     </motion.div>
   );
@@ -129,7 +123,7 @@ function Home() {
 
           <FadeIn className="flex flex-col justify-center" delay={0.1}>
             <span className="inline-flex w-fit rounded-full border border-primary/40 bg-primary/10 px-4 py-1 text-[11px] font-medium uppercase tracking-widest text-primary">
-              Global Risk Compliance
+              PROCESS × AUTOMATION × AI  
             </span>
             <h1 className="mt-6 text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl">
               Hello, I'm
@@ -143,7 +137,7 @@ function Home() {
       sequence={[
         "Global Trade Analyst",
         2000,
-        "Compliance Specialist",
+        "I REDESIGN HOW WORK MOVES",
         2000,
         "AI Workflow Specialist",
         2000,
@@ -155,9 +149,7 @@ function Home() {
   </span>
 </p>
             <p className="mt-6 max-w-lg text-sm leading-relaxed text-muted-foreground">
-              Analytical specialist with 4+ years of experience in Denied Party Screening (DPS),
-              regulatory compliance, and workflow automation. I leverage Power automate and AI Agents (power platform) to
-              transform complex legal data into actionable intelligence.
+               I analyze complex workflows, identify operational friction, redesign processes, and build automation and AI solutions where they create measurable value.
             </p>
 
             <div className="mt-6 flex gap-2">
