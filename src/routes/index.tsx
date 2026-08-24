@@ -19,6 +19,7 @@ import {
   Workflow,
 } from "lucide-react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { useState } from "react";
 import portrait from "@/assets/portrait.jpg";
 import { CountUp, FadeIn, Magnetic } from "@/components/Motion";
 import { downloadResumePdf } from "@/lib/generateResume";
@@ -58,6 +59,7 @@ const skills = [
 ];
 
 function TiltPortrait() {
+  const [isColored, setIsColored] = useState(false);
   const rx = useMotionValue(0);
   const ry = useMotionValue(0);
   const sx = useSpring(rx, { stiffness: 120, damping: 12 });
@@ -68,6 +70,7 @@ function TiltPortrait() {
   return (
     <motion.div
       className="relative [perspective:1000px]"
+      onClick={() => setIsColored(!isColored)}
       onMouseMove={(e) => {
         const b = e.currentTarget.getBoundingClientRect();
         rx.set((e.clientX - b.left) / b.width - 0.5);
@@ -97,7 +100,9 @@ function TiltPortrait() {
           alt="Portrait of Tarun Shendge"
           width={832}
           height={1024}
-          className="block h-full w-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+          className={`block h-full w-full object-cover transition-all duration-700 hover:scale-105 ${
+  isColored ? "grayscale-0 scale-105" : "grayscale"
+}`}
         />
       </motion.div>
     </motion.div>
