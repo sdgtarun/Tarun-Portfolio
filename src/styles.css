@@ -25,86 +25,87 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Newsreader", ui-serif, Georgia, serif;
 }
 
 :root {
-  --radius: 0.75rem;
-
-  /* Warm white / off-white */
-  --background: #FAF9F7;
-  --foreground: #1F1F1F;
-
-  /* Editorial surfaces */
-  --surface: #F5F3F0;
-  --surface-2: #ECE9E5;
-
-  --card: #FFFFFF;
-  --card-foreground: #1F1F1F;
-
-  --popover: #FFFFFF;
-  --popover-foreground: #1F1F1F;
-
-  /* Deep professional red from specification */
-  --primary: #B42318;
-  --primary-foreground: #FFFFFF;
-
-  --secondary: #F0EEEB;
-  --secondary-foreground: #2B2B2B;
-
-  --muted: #F0EEEB;
-  --muted-foreground: #6B6865;
-
-  --accent: #C62828;
-  --accent-foreground: #FFFFFF;
-
-  --destructive: #B42318;
-  --destructive-foreground: #FFFFFF;
-
-  /* Charcoal/light borders */
-  --border: #DDD9D4;
-  --input: #E5E1DC;
-  --ring: #B42318;
+  --radius: 0.5rem;
+  /* Warm white casebook background */
+  --background: oklch(0.985 0.006 85);
+  --foreground: oklch(0.24 0.012 265);
+  --ink: oklch(0.24 0.012 265);
+  --surface: oklch(1 0 0);
+  --surface-2: oklch(0.955 0.008 85);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.012 265);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.012 265);
+  /* Deep professional red — the signal for intervention */
+  --primary: oklch(0.49 0.176 27);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.955 0.008 85);
+  --secondary-foreground: oklch(0.24 0.012 265);
+  --muted: oklch(0.955 0.008 85);
+  --muted-foreground: oklch(0.5 0.012 265);
+  --accent: oklch(0.49 0.176 27);
+  --accent-foreground: oklch(0.99 0 0);
+  --destructive: oklch(0.49 0.176 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.24 0.012 265 / 12%);
+  --input: oklch(0.24 0.012 265 / 18%);
+  --ring: oklch(0.49 0.176 27);
 }
 
 .dark {
-  --background: oklch(0.16 0.04 260);
-  --foreground: oklch(0.98 0.005 240);
-  --card: oklch(0.21 0.045 260);
-  --card-foreground: oklch(0.98 0.005 240);
-  --popover: oklch(0.21 0.045 260);
-  --popover-foreground: oklch(0.98 0.005 240);
-  --primary: oklch(0.82 0.15 210);
-  --primary-foreground: oklch(0.16 0.04 260);
-  --secondary: oklch(0.27 0.05 260);
-  --secondary-foreground: oklch(0.98 0.005 240);
-  --muted: oklch(0.27 0.05 260);
-  --muted-foreground: oklch(0.72 0.03 250);
-  --accent: oklch(0.82 0.15 210);
-  --accent-foreground: oklch(0.16 0.04 260);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.82 0.15 210);
+  --background: oklch(0.985 0.006 85);
+  --foreground: oklch(0.24 0.012 265);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.012 265);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.012 265);
+  --primary: oklch(0.49 0.176 27);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.955 0.008 85);
+  --secondary-foreground: oklch(0.24 0.012 265);
+  --muted: oklch(0.955 0.008 85);
+  --muted-foreground: oklch(0.5 0.012 265);
+  --accent: oklch(0.49 0.176 27);
+  --accent-foreground: oklch(0.99 0 0);
+  --border: oklch(0.24 0.012 265 / 12%);
+  --input: oklch(0.24 0.012 265 / 18%);
+  --ring: oklch(0.49 0.176 27);
 }
 
-@utility cyan-glow {
+/* Editorial card lift — no glow, just paper depth */
+@utility paper {
   box-shadow:
-    0 0 40px -8px color-mix(in oklab, var(--primary) 45%, transparent),
-    0 0 120px -20px color-mix(in oklab, var(--primary) 35%, transparent);
+    0 1px 2px oklch(0.24 0.012 265 / 6%),
+    0 12px 32px -20px oklch(0.24 0.012 265 / 25%);
 }
 
-@utility text-gradient-cyan {
-  background: linear-gradient(180deg, var(--primary), color-mix(in oklab, var(--primary) 70%, white));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+@utility paper-hover {
+  box-shadow:
+    0 2px 4px oklch(0.24 0.012 265 / 8%),
+    0 24px 48px -24px oklch(0.24 0.012 265 / 32%);
+}
+
+/* Thin deep-red rule used as the intervention marker */
+@utility rule-red {
+  background: var(--primary);
+}
+
+@utility label-caps {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 @layer base {
@@ -119,5 +120,8 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--primary) 22%, transparent);
   }
 }
