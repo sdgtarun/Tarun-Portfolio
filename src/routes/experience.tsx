@@ -77,7 +77,7 @@ const certifications = [
 
 function ExperiencePage() {
   return (
-    <div className="mx-auto max-w-7xl px-6 py-16">
+    <div className="mx-auto max-w-7xl px-6 py-10">
       <span className="text-[11px] font-medium uppercase tracking-widest text-primary">
         Career Milestones
       </span>
