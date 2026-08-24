@@ -219,11 +219,11 @@ function Home() {
 
       {/* Stats */}
       <section className="border-y border-white/5 bg-surface/40">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 py-10 md:grid-cols-4">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-4 gap-y-6 px-4 py-8 md:grid-cols-4 md:gap-8 md:px-6 md:py-10">
           {stats.map((s, i) => (
             <FadeIn key={s.value} delay={i * 0.08}>
-              <div className="flex items-center gap-4">
-                <CountUp value={s.value} className="text-4xl font-extrabold text-primary" />
+              <div className="flex flex-col items-start gap-1">
+                <CountUp value={s.value} className="text-3xl font-extrabold text-primary sm:text-4xl" />
                 <div className="text-xs leading-tight text-muted-foreground">
                   <div>{s.label}</div>
                   <div className="font-semibold text-foreground">{s.label2}</div>
@@ -235,7 +235,7 @@ function Home() {
       </section>
 
       {/* Core Skills */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section className="mx-auto max-w-7xl px-6 py-8 md:py-12">
         <FadeIn>
           <h2 className="text-3xl font-bold tracking-tight">Core Skills</h2>
           <p className="mt-3 max-w-xl text-sm text-muted-foreground">
