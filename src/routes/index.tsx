@@ -41,7 +41,7 @@ const stats = [
   { value: "4+", label: "Years of", label2: "Experience" },
   { value: "280+", label: "Regulatory Websites", label2: "" },
   { value: "5,000+", label: "Manual Hours", label2: "Eliminated" },
-  { value: "AI Agents", label: "AND", label2: "AUTOMATION" },
+  { value: "AI", label: "Agents &", label2: "Automation" },
 ];
 
 const skills = [
