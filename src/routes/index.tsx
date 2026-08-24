@@ -39,8 +39,8 @@ export const Route = createFileRoute("/")({
 
 const stats = [
   { value: "4+", label: "Years of", label2: "Experience" },
-  { value: "AI", label: "Risk & Compliance", label2: "Automation" },
-  { value: "5k", label: "Manual Hours", label2: "Optimized" },
+  { value: "AI", label: "280+", label2: "Regulatory Websites" },
+  { value: "5,000+", label: "Manual Hours", label2: "Eliminated" },
   { value: "100+", label: "Compliance", label2: "Scenarios" },
 ];
 
