@@ -46,13 +46,13 @@ const stats = [
 ];
 
 const skills = [
-  { icon: Shield, label: "Denied Party Screening (DPS)" },
-  { icon: ShieldCheck, label: "Sanctions & Risk Compliance" },
-  { icon: Bot, label: "Python & AI Agents" },
+  { icon: Shield, label: "Python & AI Agents" },
+  { icon: ShieldCheck, label: "Power automate" },
+  { icon: Bot, label: "Process Automation" },
   { icon: Sparkles, label: "Working with LLMs" },
-  { icon: Workflow, label: "Process Automation" },
-  { icon: BarChart3, label: "Power BI & Dashboards" },
-  { icon: Database, label: "Power automate" },
+  { icon: Workflow, label: "Power BI & Dashboards" },
+  { icon: BarChart3, label: "Denied Party Screening (DPS)" },
+  { icon: Database, label: "Sanctions & Risk Compliance" },
   { icon: FileText, label: "Regulatory Content Analysis" },
   { icon: GraduationCap, label: "Standard Operating Procedures" },
   { icon: Users, label: "Cross-functional Training" },
@@ -101,7 +101,7 @@ function TiltPortrait() {
           width={832}
           height={1024}
           className={`block h-full w-full object-cover transition-all duration-700 hover:scale-105 ${
-  isColored ? "grayscale-0 scale-105" : "grayscale"
+  isColored ? "grayscale-0 scale-105" : "grayscale hover:grayscale-0"
 }`}
         />
       </motion.div>

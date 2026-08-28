@@ -4,7 +4,7 @@ import { Mail, Globe } from "lucide-react";
 export function SiteFooter() {
   return (
     <footer className="border-t border-white/5 bg-background">
-      <div className="mx-auto max-w-7xl px-6 py-14">
+      <div className="mx-auto max-w-7xl px-6 py-8 md:py-14">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <div className="text-base font-semibold text-foreground">Tarun Shendge</div>
@@ -17,9 +17,9 @@ export function SiteFooter() {
             <div className="text-sm font-semibold text-foreground">Sitemap</div>
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li><Link to="/" className="hover:text-primary">Home</Link></li>
-              <li><Link to="/experience" className="hover:text-primary">Experience</Link></li>
+              <li><Link to="/Approach" className="hover:text-primary">Approach</Link></li>
               <li><Link to="/process" className="hover:text-primary">Process Improvements</Link></li>
-              <li><Link to="/education" className="hover:text-primary">Education</Link></li>
+              <li><Link to="/Experience" className="hover:text-primary">Experience</Link></li>
               <li>
                 <a href="https://www.linkedin.com/in/tarun-shendge-81a546198/" className="hover:text-primary">LinkedIn</a>
               </li>
@@ -54,7 +54,7 @@ export function SiteFooter() {
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-white/5 pt-6 text-center text-xs uppercase tracking-wider text-muted-foreground">
+        <div className="mt-8 md:mt-12 border-t border-white/5 pt-6 text-center text-xs uppercase tracking-wider text-muted-foreground">
           © Tarun Shendge. Global Trade &amp; Sanctions Risk Specialist. All rights reserved.
         </div>
       </div>

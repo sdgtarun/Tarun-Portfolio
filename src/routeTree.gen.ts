@@ -13,6 +13,7 @@ import { Route as ResumeRouteImport } from './routes/resume'
 import { Route as ProcessRouteImport } from './routes/process'
 import { Route as ExperienceRouteImport } from './routes/experience'
 import { Route as EducationRouteImport } from './routes/education'
+import { Route as ApproachRouteImport } from './routes/approach'
 import { Route as IndexRouteImport } from './routes/index'
 
 const ResumeRoute = ResumeRouteImport.update({
@@ -35,6 +36,11 @@ const EducationRoute = EducationRouteImport.update({
   path: '/education',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApproachRoute = ApproachRouteImport.update({
+  id: '/approach',
+  path: '/approach',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -43,6 +49,7 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/approach': typeof ApproachRoute
   '/education': typeof EducationRoute
   '/experience': typeof ExperienceRoute
   '/process': typeof ProcessRoute
@@ -50,6 +57,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/approach': typeof ApproachRoute
   '/education': typeof EducationRoute
   '/experience': typeof ExperienceRoute
   '/process': typeof ProcessRoute
@@ -58,6 +66,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/approach': typeof ApproachRoute
   '/education': typeof EducationRoute
   '/experience': typeof ExperienceRoute
   '/process': typeof ProcessRoute
@@ -65,14 +74,23 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/education' | '/experience' | '/process' | '/resume'
+  fullPaths:
+    '/' | '/approach' | '/education' | '/experience' | '/process' | '/resume'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/education' | '/experience' | '/process' | '/resume'
-  id: '__root__' | '/' | '/education' | '/experience' | '/process' | '/resume'
+  to: '/' | '/approach' | '/education' | '/experience' | '/process' | '/resume'
+  id:
+    | '__root__'
+    | '/'
+    | '/approach'
+    | '/education'
+    | '/experience'
+    | '/process'
+    | '/resume'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ApproachRoute: typeof ApproachRoute
   EducationRoute: typeof EducationRoute
   ExperienceRoute: typeof ExperienceRoute
   ProcessRoute: typeof ProcessRoute
@@ -109,6 +127,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EducationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/approach': {
+      id: '/approach'
+      path: '/approach'
+      fullPath: '/approach'
+      preLoaderRoute: typeof ApproachRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -121,6 +146,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ApproachRoute: ApproachRoute,
   EducationRoute: EducationRoute,
   ExperienceRoute: ExperienceRoute,
   ProcessRoute: ProcessRoute,

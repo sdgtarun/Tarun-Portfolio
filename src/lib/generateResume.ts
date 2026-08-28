@@ -82,12 +82,12 @@ export function downloadResumePdf() {
 
   sideHeading("CORE SKILLS");
   [
-    "Denied Party Screening (DPS)",
-    "Sanctions & Risk Compliance",
     "Python & AI Agents",
     "Process Automation (Power Automate)",
     "Power BI & Dashboards",
     "SQL & Database Mgmt",
+    "Denied Party Screening (DPS)",
+    "Sanctions & Risk Compliance",
     "Regulatory Content Analysis",
     "Standard Operating Procedures (SOPs)",
     "Cross-functional Training",

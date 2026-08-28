@@ -5,10 +5,9 @@ import { useState } from "react";
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/experience", label: "Experience" },
+  { to: "/Approach", label: "Approach" },
   { to: "/process", label: "Process / Automations" },
   { to: "/education", label: "Education" },
-  { to: "/resume", label: "Resume" },
 ] as const;
 
 export function SiteHeader() {
