@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Globe } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -9,8 +9,7 @@ export function SiteFooter() {
           <div>
             <div className="text-base font-semibold text-foreground">Tarun Shendge</div>
             <p className="mt-3 max-w-xs text-sm text-muted-foreground">
-              Global Trade &amp; Sanctions Risk Specialist specializing in technical compliance
-              automation.
+              Improving complex workflows through process redesign, automation and Al.
             </p>
           </div>
           <div>
@@ -18,17 +17,14 @@ export function SiteFooter() {
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li><Link to="/" className="hover:text-primary">Home</Link></li>
               <li><Link to="/Approach" className="hover:text-primary">Approach</Link></li>
-              <li><Link to="/process" className="hover:text-primary">Process Improvements</Link></li>
+              <li><Link to="/process" className="hover:text-primary">Process / Automations</Link></li>
               <li><Link to="/Experience" className="hover:text-primary">Experience</Link></li>
-              <li>
-                <a href="https://www.linkedin.com/in/tarun-shendge-81a546198/" className="hover:text-primary">LinkedIn</a>
-              </li>
             </ul>
           </div>
           <div>
             <div className="text-sm font-semibold text-foreground">Contact</div>
             <p className="mt-3 max-w-xs text-sm text-muted-foreground">
-              Let's connect and build smarter compliance solutions
+              Let's build a smarter system and process that deliver results
             </p>
             <div className="mt-4 flex gap-3">
               <a
@@ -45,11 +41,7 @@ export function SiteFooter() {
   aria-label="LinkedIn"
   className="grid h-10 w-10 place-items-center rounded-md bg-surface text-primary ring-1 ring-white/10 hover:bg-primary/10 hover:ring-primary/40"
 >
-  <img
-  src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
-  alt="LinkedIn"
-  className="h-4 w-4 invert"
-/>
+  <Linkedin className="h-4 w-4" />
 </a>
             </div>
           </div>

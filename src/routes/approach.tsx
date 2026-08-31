@@ -766,7 +766,7 @@ function ApproachPage() {
               to="/process"
               className="inline-flex w-fit items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
             >
-              SEE TRANSFORMATIONS
+              SEE Process / Automations
               <ArrowRight className="h-4 w-4" />
             </Link>
 

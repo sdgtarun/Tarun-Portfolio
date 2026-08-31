@@ -7,7 +7,7 @@ const links = [
   { to: "/", label: "Home" },
   { to: "/Approach", label: "Approach" },
   { to: "/process", label: "Process / Automations" },
-  { to: "/education", label: "Education" },
+  { to: "/Experience", label: "Experience" },
 ] as const;
 
 export function SiteHeader() {
