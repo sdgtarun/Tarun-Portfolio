@@ -34,7 +34,7 @@ const tools = [
   { name: "OpenArena Chain", pct: 85 },
   { name: "Power BI", pct: 90 },
   { name: "Power Automate", pct: 88 },
-  { name: "Cloud A.I.", pct: 80 },
+  { name: "Claude A.I.", pct: 80 },
   { name: "Copilot Studio", pct: 76 },
 ];
 
@@ -58,7 +58,7 @@ const pipeline = [
 
 function ProcessPage() {
   return (
-    <div className="mx-auto max-w-7xl px-6 py-16">
+    <div className="mx-auto max-w-7xl px-6 py-10">
       {/* Hero */}
       <span className="text-[11px] font-medium uppercase tracking-widest text-primary">
         Process & Automation

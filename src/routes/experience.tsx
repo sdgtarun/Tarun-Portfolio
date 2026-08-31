@@ -36,8 +36,8 @@ const techStack = [
   "Copilot studio",
   "Claude AI",
   "Power BI",
-  "LangChain",
   "Python",
+  "Microsoft 365 Suite",
   "Sanctions",
   "Compliance",
   "LLM'S/NLP"
@@ -94,7 +94,7 @@ function ExperiencePage() {
             <div className="mt-6 space-y-6">
               {coreImpact.map((i, idx) => (
                 <FadeIn key={i.value} delay={idx * 0.1}>
-                  <CountUp value={i.value} className="text-4xl font-extrabold text-primary" />
+                  <CountUp value={i.value} className="text-3xl font-extrabold text-primary sm:text-4xl" />
                   <div className="text-xs font-semibold uppercase tracking-wider text-foreground">
                     {i.head}
                   </div>
