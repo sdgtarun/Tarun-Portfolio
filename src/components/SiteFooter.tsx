@@ -16,9 +16,9 @@ export function SiteFooter() {
             <div className="text-sm font-semibold text-foreground">Sitemap</div>
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li><Link to="/" className="hover:text-primary">Home</Link></li>
-              <li><Link to="/Approach" className="hover:text-primary">Approach</Link></li>
+              <li><Link to="/approach" className="hover:text-primary">Approach</Link></li>
               <li><Link to="/process" className="hover:text-primary">Process / Automations</Link></li>
-              <li><Link to="/Experience" className="hover:text-primary">Experience</Link></li>
+              <li><Link to="/experience" className="hover:text-primary">Experience</Link></li>
             </ul>
           </div>
           <div>
